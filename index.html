@@ -8,23 +8,40 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-
     <div class = "header">
         <img id = "libraryIcon" src="./images/library-114-512.png">
         <h1>Library</h1>
+        
     </div>
-    <div class = "prompt">
-        <input type = "text" placeholder="name">
-        <input type = "text" placeholder="author">
-        <input type = "number" placeholder="pages">
-        <div class = "button toggle">
-            <button>Read</button>
-        </div>
-        <button>Submit</button>
-        <button>Cancel</button>
+    <div class = "buttonContainer">
+        <button class ="add">Add Book</button>
+        <div id="popupMessage" class="hidden">Book Added Successfully!</div>
     </div>
-
-    <button class ="add">Add Books</button>
+    <dialog id="bookDialog">
+        <form id="bookForm">
+          <label for="bookName">Book Name:</label>
+          <input type="text" id="bookName" required>
+      
+          <label for="authorName">Author Name:</label>
+          <input type="text" id="authorName" required>
+      
+          <label for="numPages">Number of Pages:</label>
+          <input type="number" id="numPages" required>
+      
+          <label>
+            <input type="checkbox" id="readStatus">
+            Have you read it?
+          </label>
+      
+          <button type="submit">Add Book</button>
+          <button type="button" id="closeDialog">Cancel</button>
+        </form>
+    </dialog>
+    <div id = "main">
+        <div class = "bookContainer"></div>
+    </div>
+    
+    
 </body>
 <footer>
     <div><a href= "https://github.com/Joel-Sony">Copyright © Joel Sony</a></div>

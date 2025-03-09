@@ -7,11 +7,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+  height:100vh;
+}
+
 .add{
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   box-sizing: border-box;
   color: #121212;
   cursor: pointer;
@@ -33,6 +37,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  max-width:8rem;
 }
 
 .add:hover {
@@ -61,13 +66,45 @@ a {
 
 .header{
   display:flex;
-  padding-left: 10vw;
-  padding-top: 4vh;
-  background-color: beige;
-  padding-bottom: 4vh;
+  background-color: rgb(66, 71, 138);
   align-items: center;
+  justify-content: start;
+  padding: 2rem 6rem;
+  color:white
 }
 
 #libraryIcon{
   width:6rem;
+}
+
+.buttonContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+
+footer{
+  display:flex;
+  justify-content: center;
+}
+
+#main{
+  height: 30rem ;
+}
+
+.hidden {
+  display: none;
+}
+
+#popupMessage {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(66, 71, 138);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  font-size: 16px;
 }

@@ -1,36 +1,23 @@
-# OdinLibrary
-Library Website
+# 📚 Library Website
 
-A simple web-based library management system where users can add books, track reading status, and remove books from their collection.
+A fun and simple web-based library where you can add books, keep track of what you've read, and remove books when you're done.
 
-## Features
+## ✨ Features
 
 Add books with details: Title, Author, Number of Pages, and Read Status
 
-Display books in a structured list format
+See books neatly listed in a structured format
 
-Limit library to 8 books with a notification when full
+A maximum of 8 books—you'll get a friendly "Library Full" message if you try to add more
 
-Remove books using a dedicated button
+## 🚀 How to Use
 
-Modal form for adding new books
+Click Add Book to open the form.
 
-## Technologies Used
+Fill in the book details and hit submit.
 
-HTML - Structure of the webpage
+Your book will appear in the library (unless it's full!).
 
-CSS - Styling the layout and modal box
+Click Remove to take a book off the list.
 
-JavaScript - Managing the library logic
-
-## Usage
-
-Click Add Book to open the book entry form.
-
-Fill in the details and submit.
-
-The book will be added to the library if space is available.
-
-Click the Remove button to delete a book.
-
-If the library reaches 8 books, a "Library Full" message will be displayed.
+If you try adding more than 8 books, you'll see a Library Full message.

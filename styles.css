@@ -12,11 +12,17 @@ body{
 }
 
 footer{
-  background-color: rgb(66, 71, 138);
+  background-color: rgb(28, 36, 145);
   max-height: 3rem;
   height: 2.5rem;
   color:white;
 }
+
+footer:hover{
+  cursor: pointer;
+
+}
+
 .add{
   align-items: center;
   background-color: #fff;
@@ -60,10 +66,10 @@ footer{
 }
 
 a {
-  all: unset; /* Resets all styles */
-  text-decoration: none; /* Removes underline */
-  color: inherit; /* Inherits text color from parent */
-  cursor: text; /* Changes cursor to text-like */
+  all: unset;
+  text-decoration: none;
+  color: inherit; 
+  cursor: pointer; 
 }
 
 .prompt{
@@ -72,7 +78,7 @@ a {
 
 .header{
   display:flex;
-  background-color: rgb(66, 71, 138);
+  background-color: rgb(28, 36, 145);
   align-items: center;
   justify-content: center;
   padding: 2rem 6rem;
@@ -96,28 +102,29 @@ footer{
 }
 
 #main{
-  height: 30rem ;
+  height: 34rem ;
 }
 
 .hidden {
   display: none;
 }
 
-#popupMessage {
+#popupMessage, #libraryFullMessage {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgb(66, 71, 138);
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 225, 0);
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
   font-size: 16px;
+  font-weight: 800;
 }
 
 .bookContainer{
-  width: 14rem;
-  height: 11rem;
+  width: 17rem;
+  height: 14rem;
   background-color: rgb(28, 36, 145);
   display: flex;
   flex-direction: column;
@@ -136,3 +143,70 @@ footer{
   gap: 3rem;
   justify-content: center;
 }
+
+#bookDialog {
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bookDialog::backdrop {
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+#bookForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#bookForm input, #bookForm button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#bookForm button {
+  background-color: rgb(28, 36, 145);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+#bookForm button:hover {
+  background-color: rgb(28, 36, 145);
+}
+
+#closeDialog {
+  background-color: #d9534f;
+}
+
+#closeDialog:hover {
+  background-color: #c9302c;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-left: 3rem;
+}
+
+.remove-btn:hover {
+  background-color: darkred;
+}
+

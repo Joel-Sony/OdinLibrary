@@ -11,8 +11,17 @@ const addButton = document.querySelector(".add");
 const dialog = document.getElementById("bookDialog");
 const closeButton = document.getElementById("closeDialog");
 
+function showLibraryFullMessage(){
+    let popUp = document.getElementById("libraryFullMessage");
+    popUp.classList.remove("hidden");
+    setTimeout(() => popUp.classList.add("hidden"), 2000);
+}
 
 addButton.addEventListener("click", function(event){
+    if(books.length >= 8){
+        showLibraryFullMessage();
+        return;
+    }
     dialog.showModal();
 })
 
@@ -25,6 +34,7 @@ let books = [];
 
 document.getElementById("bookForm").addEventListener("submit", function(event){
     event.preventDefault();
+
     const bookName = document.getElementById("bookName").value;
     const author = document.getElementById("authorName").value;
     const pages = document.getElementById("numPages").value;
@@ -66,14 +76,22 @@ function addBookToLibrary(book) {
     const readCheckbox = document.createElement("input");
     readCheckbox.type = "checkbox";
     readCheckbox.checked = book.read;
-
     readItem.appendChild(readCheckbox);
 
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.classList.add("remove-btn");
+
+    removeButton.addEventListener("click", function () {
+        books = books.filter((b) => b !== book);
+        bookContainer.remove();
+    });
 
     bookList.appendChild(nameItem);
     bookList.appendChild(authorItem);
     bookList.appendChild(pageItem);
     bookList.appendChild(readItem);
+    bookList.appendChild(removeButton);
 
     bookContainer.appendChild(bookList);
 

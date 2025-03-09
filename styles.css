@@ -11,6 +11,12 @@ body{
   height:100vh;
 }
 
+footer{
+  background-color: rgb(66, 71, 138);
+  max-height: 3rem;
+  height: 2.5rem;
+  color:white;
+}
 .add{
   align-items: center;
   background-color: #fff;
@@ -68,7 +74,7 @@ a {
   display:flex;
   background-color: rgb(66, 71, 138);
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   padding: 2rem 6rem;
   color:white
 }
@@ -101,10 +107,32 @@ footer{
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(66, 71, 138);
+  background-color: rgb(66, 71, 138);
   color: rgb(255, 255, 255);
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
   font-size: 16px;
+}
+
+.bookContainer{
+  width: 14rem;
+  height: 11rem;
+  background-color: rgb(28, 36, 145);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  line-height: 30px;
+}
+
+#library{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
 }

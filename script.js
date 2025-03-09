@@ -40,6 +40,16 @@ document.getElementById("bookForm").addEventListener("submit", function(event){
     const pages = document.getElementById("numPages").value;
     const read = document.getElementById("readStatus").checked;
 
+    if (pages < 1 || isNaN(pages)) {
+        alert("Please enter a valid positive number for pages.");
+        return;
+    }
+
+    if (books.some(book => book.title.toLowerCase() === bookName.toLowerCase())) {
+        alert("This book is already in your library!");
+        return;
+    }
+
     let newBook = new Book(bookName,author,pages,read)
     books.push(newBook);
     showPopup();
